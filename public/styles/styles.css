@@ -1,0 +1,383 @@
+.default-page {
+    color: #F2E8C6;
+    text-align: center;
+    font-size: 1.5rem;
+    background-size: 100% 100%;
+    background: url(../images/spices.jpg) no-repeat center center/cover;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Playfair Display", sans-serif;;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+    color: #f5f7ee;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-style: normal;
+    letter-spacing: 1px;
+    margin: 20px 0;
+
+}
+h1.Brand {
+    font-family: "Playfair Display", sans-serif;;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+    color: #f5f7ee;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-style: normal;
+    letter-spacing: 1px;
+    margin: 20px 0;
+
+}
+
+h2 {
+    letter-spacing: 1px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+    letter-spacing: 1px; /* fAdjust letter-spacing to get a similar effect */
+    color: #333; /* Dark gray color */
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 4rem;
+    font-style: normal;
+}
+
+h3 {
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
+
+h4 {
+    margin-top: 0px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.process{
+    margin-top: 0px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #1B4242;
+
+}
+
+.dishName h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.call{
+    padding-top: 100px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 0;
+    background: url(../images/Greenonions.jpg) no-repeat center center/cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    z-index: -1;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.random button{
+    border-radius: 8px;
+}
+
+.drop-down, .random {
+    flex-direction: column; /* Align elements vertically */
+    align-items: center; /* Center elements horizontally */
+    margin: 50px; /* Space between the two sections */
+    padding: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* Styling for the select, input, and button elements */
+select, input, button {
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif; 
+    padding: 5px;
+    margin-block-end: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px; /* Set a fixed width for consistency */
+}
+
+.group{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+.recipe-endpoint {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #D3F1DF;
+    font-size: 1.65rem;
+}
+
+.recipe-button button{
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+select {
+    width: auto;
+}
+
+input[type="submit"],
+button {
+    background-color: #d87265 !important; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #ff7f50; /* Lighter orange shade */
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* Light overlay */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styling recipe page */
+
+.dish-selected {
+    background-color: #F2E8C6; 
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.dish-selected h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.dish-selected .drop-down, .dish-selected .random{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;  
+}
+
+.random {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.dish-selected select, 
+.dish-selected input, 
+.dish-selected button {
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px auto;
+    /* margin-top: 5px; */
+    width: auto;
+}
+
+.dishName, .ingredients, .instruction {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(248, 249, 250, 0.5);
+    
+}
+
+.recipe-button{
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px auto;
+    width: auto;
+    background-color: #d87265 !important; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-button:hover {
+    background-color: #E04E42;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Center the entire content horizontally */
+    margin-bottom: 40px;
+}
+
+.main-container > div {
+    margin: 20px auto;
+}
+
+.ingredients {
+    flex: 2; /* Allow the ingredients to take up available space */
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+    font-family: "Poiret One", sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: left; /* Keep text aligned to the left */
+}
+
+img {
+    border-radius: 8px;
+    width: 70%;
+    margin: auto;
+    max-width: 100%;  
+    height: auto;
+}
+
+ul {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+}
+
+ul li {
+    margin-bottom: 8px;
+    list-style-position: inside;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.instruction {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 10%;
+    /*font-family: "Nunito", sans-serif;*/
+    font-family: "Poiret One", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main-content {
+    flex: 1; /* Makes this container take up all remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer{
+    background-color: #2c3e50;
+    color: #bbb;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    /*line-height: 30px; */
+    position: fixed;
+}
+
+
+@media (max-width: 990px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-container img {
+        width: 100%; /* Ensure images are responsive */
+    }
+    .main-container .ingredient {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

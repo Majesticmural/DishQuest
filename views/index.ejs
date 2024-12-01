@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishQuest</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;0,700;1,400..900;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Nunito:ital@1&family=Playfair+Display:ital,wght@0,400..900;0,700;1,400..900;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+
+<body class = "<%= mealName ? 'dish-selected' : 'default-page' %>">
+    
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+        <div class="container-fluid d-flex justify-content-center">
+          <h1 class="Brand">DishQuest</h1>
+          
+        </div>
+    </nav>
+
+    <div class = "drop-down">
+        <form action="/recipe" method="POST">
+           <!--<label class = "group" for="categories"> Choose your food category:</label>-->
+           <label class="group <%= currentRoute === '/recipe' ? 'recipe-endpoint' : '' %>">Choose your food category: </label>
+
+
+            <select name="categories" id="categories">
+
+                <option value="chicken" <%= mealCategory === 'Chicken' ? 'selected': '' %>>Chicken</option>
+                <option value="salmon" <%= mealCategory === 'Salmon' ? 'selected': '' %>>Salmon</option>
+                <option value="pork" <%= mealCategory === 'Pork' ? 'selected' : '' %>>Pork</option>
+                <option value="lamb" <%= mealCategory === 'Lamb' ? 'selected' : '' %>>Lamb</option>
+                <option value="seafood" <%= mealCategory === 'Seafood' ? 'selected' : '' %>>Seafood</option>
+                <option value="pasta" <%= mealCategory === 'Pasta' ? 'selected' : '' %>>Pasta</option>
+                <option value="dessert" <%= mealCategory === 'Dessert' ? 'selected' : '' %>>Dessert</option>
+                <option value="breakfast" <%= mealCategory === 'Breakfast' ? 'selected' : '' %>>Breakfast</option>
+                <option value="side" <%= mealCategory === 'Side dish' ? 'selected' : '' %>>Side dish</option>
+                <option value="starter" <%= mealCategory === 'Starter' ? 'selected' : '' %>>Starter</option>
+                <option value="vegan" <%= mealCategory === 'Vegan' ? 'selected' : '' %>>Vegan</option>
+                <option value="vegetarian" <%= mealCategory === 'Vegetarian' ? 'selected' : '' %>>Vegetarian</option>
+                <option value="misc" <%= mealCategory === 'Miscellaneous' ? 'selected' : '' %>>Miscellaneous</option>
+
+            </select>
+            <input type="submit" value = "Search Recipe" <%= currentRoute === '/recipe' ? 'recipe-button' : '' %>>
+        </form>
+    </div>
+
+    <div class = "random">
+        <form action="/recipe" method = "POST">
+            <!--<label class = "group" for="Random"> Select a random recipe</label>-->
+            <label class="group <%= currentRoute === '/recipe' ? 'recipe-endpoint' : '' %>">Select a random recipe</label>
+            <button type="submit" name = "random" <%= currentRoute === '/recipe' ? 'recipe-button' : '' %>>Random Recipe</button>
+        </form>
+
+    </div>
+
+    <% if (mealName && mealCategory && mealImage) { %>
+
+    <div class="dishName">
+        <h2><%= mealName %></h2>
+        <h3><%= mealCategory %></h3>
+    </div>
+
+    <div class="main-container container">
+
+        <div class = "dishImage">
+            <img src="<%= mealImage %>" alt="<%= mealName %> dish">
+        </div>
+
+        <div class="ingredients">
+            <h4>Ingredients: </h4>
+            <ul>
+                <% ingredients.forEach(function(item){%>
+                    <li> <%= item.measure %> <%= item.ingredient %></li>
+
+                <% }) %>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="instruction">
+        <h4 class="process"> Crafting the Dish</h4>
+
+        <% if (mealInstruction) { %>
+            <p><%= mealInstruction %></p> 
+        <% } else { %>
+            <p>No instructions available.</p>
+        <% } %>
+          
+          <% if (error) { %>
+            <p class="error-message"><%= error %></p>
+          <% } %>
+          
+    </div>
+    
+    
+    <% } else {%>
+
+        <h2 class="call"> Hungry? Find a recipe!</h2>
+
+        <% } %>
+
+        
+        <footer class="footer">
+              <p class="text-center">© 2024 Serving with 💕 DishQuest</p>
+            </footer>
+
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
