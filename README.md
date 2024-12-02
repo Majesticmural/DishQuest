@@ -1,5 +1,15 @@
 DishQuest
 
+**To check if node.js and npm are installed**
+node -v
+npm -v
+
+**To install Nodemon**
+npm install -g nodemon
+
+**Verify if the Nodemon is installed**
+nodemon -v
+
 **Installing all the dependencies:**
 $ npm i express axios body-parser
 
