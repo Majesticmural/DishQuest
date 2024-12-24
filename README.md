@@ -1,10 +1,10 @@
-DishQuest Project
+***DishQuest Project***
 
-Follow the below steps host this web application in Your Local system
+Follow the steps below to host this web application in your local system.
 
 **To check if node.js and npm are installed**
-node -v
-npm -v
+1. node -v
+2. npm -v
 
 **To install Nodemon**
 npm install -g nodemon
