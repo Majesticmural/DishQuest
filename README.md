@@ -7,7 +7,7 @@ Follow the steps below to host this web application in your local system.
 2. npm -v
 
 **To install Nodemon**
-npm install -g nodemon
+1. npm install -g nodemon
 
 **Verify if the Nodemon is installed**
 nodemon -v
