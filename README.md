@@ -15,7 +15,7 @@ Follow the steps below to host this web application in your local system.
 **Installing all the dependencies:**
 1. npm i express axios body-parser
 
-Alternatively you can just run 
+**Alternatively you can just run**
 1. npm i
 
 **To host it locally:**
